@@ -1,0 +1,83 @@
+﻿<Application x:Class="VidGrab.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:VidGrab"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Color x:Key="BackgroundBlue1">#FF111C24</Color>
+        <Color x:Key="BackgruondBlue2">#0c1419</Color>
+        <Color x:Key="BackgroundBlue3">#05080b</Color>
+
+        <Color x:Key="White">#FFFFFF</Color>
+        <Color x:Key="Blue">#006FA9</Color>
+        <Color x:Key="Red">#ED2700</Color>
+        <Color x:Key="Green">#BED600</Color>
+
+        <Style x:Key="ActionButton" TargetType="Button">
+            <Setter Property="Background" Value="#BED600"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ActionButtonLeftRounded" TargetType="Button">
+            <Setter Property="Background" Value="#BED600"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15, 0, 0, 15"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ActionButtonRightRounded" TargetType="Button">
+            <Setter Property="Background" Value="#BED600"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="0, 15, 15, 0"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="RoundedLabel" TargetType="Label">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="SecondaryAction" TargetType="Button">
+            <Setter Property="Background" Value="#00000000"/>
+            <Setter Property="BorderBrush" Value="#BED600"/>
+            <Setter Property="Foreground" Value="#BED600"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="BorderThickness" Value="3"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="TBox" TargetType="TextBox">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </Style.Resources>
+            <Setter Property="Padding" Value="10, 0, 0, 0"/>
+        </Style>
+
+        <Style x:Key="UnderlinedText" TargetType="Label">
+            <Setter Property="BorderThickness" Value="0,0,0,3"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
