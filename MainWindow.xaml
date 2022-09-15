@@ -80,7 +80,7 @@
                 <SolidColorBrush Color="{DynamicResource Green}"/>
             </Label.Background>
         </Label>
-        <TextBox x:Name="FilePathBox" Margin="85,0,71,11" TextWrapping="Wrap" Text="https://www.youtube.com/watch?v=xJeWySiuq1I" FontSize="10" Style="{DynamicResource TBox}" BorderThickness="0,3,3,3" Padding="7,5,7,5" Background="#FF0C1419" Height="31" VerticalAlignment="Bottom">
+        <TextBox x:Name="FilePathBox" Margin="85,0,71,11" TextWrapping="Wrap" Text="https://www.youtube.com/watch?v=xJeWySiuq1I" FontSize="10" Style="{DynamicResource TBox}" BorderThickness="0,3,3,3" Padding="7,5,7,5" Background="#FF0C1419" Height="31" VerticalAlignment="Bottom" TextChanged="OutputPathChanged">
             <TextBox.Foreground>
                 <SolidColorBrush Color="{DynamicResource Green}"/>
             </TextBox.Foreground>

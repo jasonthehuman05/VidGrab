@@ -30,6 +30,7 @@ namespace VidGrab
         CancellationTokenSource VCanceller;
         CancellationTokenSource ACanceller;
         Progress<DownloadProgress> progress;
+        bool shouldUpdate = false;
 
         public MainWindow()
         {
@@ -41,7 +42,7 @@ namespace VidGrab
                 FFmpegPath = "binaries/ffmpeg/ffmpeg.exe",
                 OutputFolder = FilePathBox.Text
             };
-
+            shouldUpdate = true;
             progress = new Progress<DownloadProgress>(p => ProgressBar.Value = p.Progress*100);
 //            progress = new Progress<DownloadProgress>(p => Console.WriteLine(p.Progress));
             CancelAudioDownloadButton.Visibility = Visibility.Hidden;
@@ -111,6 +112,11 @@ namespace VidGrab
             {
                 FilePathBox.Text = fbd.SelectedPath;
             }
+        }
+
+        private void OutputPathChanged(object sender, TextChangedEventArgs e)
+        {
+            if (shouldUpdate) { ytdl.OutputFolder = FilePathBox.Text; }
         }
     }
 }
